@@ -1,0 +1,23 @@
+@import "styles/breakpoints";
+
+.mainLayout__content {
+  margin: 50px auto;
+  min-height: 90vh;
+  text-align: center;
+}
+
+@media (min-width: $md) {
+  .mainLayout__content {
+    width: 50%;
+  }
+}
+
+.mainLayout__footer {
+  padding: 30px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f3f3f3;
+  color: white;
+  text-align: center;
+}

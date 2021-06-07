@@ -1,0 +1,23 @@
+@import "./breakpoints";
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.MuiButton-root,
+.MuiTab-root {
+  text-transform: none !important;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+*:focus {outline:none !important}
+iframe[name^="checkout-frames"] {
+  /* Fix auto fill color bug in credit card number frame */
+  height: 55px !important;
+  border-radius: 6px;
+}
