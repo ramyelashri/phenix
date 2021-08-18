@@ -8,12 +8,12 @@ const useCheckoutStore = create(set => ({
   setPayment: (obj) => set(state => ({ payment: obj })),
   orderItems: {},
   getOrderItems: async ()=> {
-    const response = await axios.get(' http://phenix.surge.sh/products')
+    const response = await axios.get('/api/products')
     set({ orderItems: response.data.products })
   },
   createOrder: (orderData) => {
     set({loading: true});
-    axios.post(' http://phenix.surge.sh/checkout', orderData)
+    axios.post('/api/checkout', orderData)
     .then((response) => {
       console.log(response);
       set({ isOrderSuccess: true })
